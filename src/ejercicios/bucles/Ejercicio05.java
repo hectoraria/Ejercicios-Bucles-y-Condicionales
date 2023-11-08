@@ -2,11 +2,11 @@ package ejercicios.bucles;
 
 import java.util.Scanner;
 
-public class Ejercicio04 {
+public class Ejercicio05 {
 
 	public static void main(String[] args) {
 		// Variable de los numeros
-		int num1, num2, MCDiv = 0 ;
+		int num1, num2, MCMult = 0 ;
 		
 		// Crear un objeto Scanner para obtener la entrada del usuario
         Scanner sc = new Scanner(System.in);  
@@ -19,18 +19,18 @@ public class Ejercicio04 {
         System.out.print("Introduce un número 2: ");
         num2 = sc.nextInt();
         
-        for(int i=2;i<=num1;i++) {
+        for(int i=1;i<=num1*num2;i++) {
         	if(num1%i==0) {
         		if(num2%i==0) {
-        			MCDiv=i;
+        			MCMult=i;
         		}
         	}
         	
         }
-        if(MCDiv==0) {
-        	System.out.println("No hay maximo comun divisor");
+        if(MCMult==0) {
+        	System.out.println("No hay minimo comun multiplo");
         }else {
-        	System.out.println("El maximo comun divisor es: "+MCDiv);
+        	System.out.println("El minimo comun múltiplo es: "+MCMult);
         }
         
 	}
