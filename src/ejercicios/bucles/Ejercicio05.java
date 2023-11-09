@@ -19,19 +19,22 @@ public class Ejercicio05 {
         System.out.print("Introduce un número 2: ");
         num2 = sc.nextInt();
         
-        for(int i=1;i<=num1*num2;i++) {
-        	if(num1%i==0) {
-        		if(num2%i==0) {
+        for(int i=num1;i<=num1*num2;i++) {
+        	if(i%num1==0) {
+        		if(i%num2==0) {
         			MCMult=i;
+        			break;
         		}
         	}
         	
         }
+        // Compruebo si es minimo comun multiplo
         if(MCMult==0) {
         	System.out.println("No hay minimo comun multiplo");
         }else {
         	System.out.println("El minimo comun múltiplo es: "+MCMult);
         }
+        sc.close();
         
 	}
 

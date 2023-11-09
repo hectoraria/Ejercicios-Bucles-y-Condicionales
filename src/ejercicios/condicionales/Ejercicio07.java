@@ -43,6 +43,7 @@ public class Ejercicio07 {
 			
 			System.out.println("La hora es: "+horas+":"+min+":"+seg);
 		}
+		sc.close();
 		
 
 	}

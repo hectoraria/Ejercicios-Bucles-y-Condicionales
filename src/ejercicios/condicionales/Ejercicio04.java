@@ -39,7 +39,7 @@ public class Ejercicio04 {
 			
 			System.out.println("El numero es: "+ res);
 		}
-		
+		sc.close();
 	}
 
 }
