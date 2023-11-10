@@ -9,6 +9,8 @@ public class Ejercicio06 {
 		// Creo variable para recoger el número
 		int num=0;
 		
+		// Creo un string de linea 
+		String linea="";
 		// Crear un objeto Scanner para obtener la entrada del usuario
         Scanner sc = new Scanner(System.in);  
         
@@ -20,8 +22,16 @@ public class Ejercicio06 {
         		System.out.println("El dato introducido no es del tipo correcto");
         		sc.nextLine();
         	}
-        }while(num==0);
-
+        }while(num<=0);
+        
+        //Muestro la pirámide de números
+      		for(int i=1; i<=num; i++) {
+      			for(int j=1; j<=i; j++) {
+      				linea+=i;
+      			}
+      			System.out.println(linea);
+      			linea="";
+      		}
 	}
 
 }

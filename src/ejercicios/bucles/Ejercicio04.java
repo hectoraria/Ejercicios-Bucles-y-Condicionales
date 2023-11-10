@@ -19,6 +19,7 @@ public class Ejercicio04 {
         System.out.print("Introduce un número 2: ");
         num2 = sc.nextInt();
         
+        // For para poder calcular el mcd de los números
         for(int i=2;i<=num1;i++) {
         	if(num1%i==0) {
         		if(num2%i==0) {
