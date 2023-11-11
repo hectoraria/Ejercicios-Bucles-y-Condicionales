@@ -3,7 +3,18 @@ package ejercicios.condicionales;
 import java.util.Scanner;
 
 public class Ejercicio01 {
-
+	/* Introduzco: 1| Espero: Es capicua| Resultado: Es capicua
+	 * Introduzco: 33| Espero: Es capicua | Resultado: Es capicua
+	 * Introduzco: 56| Espero: No es capicua | Resultado: No es capicua
+	 * Introduzco: 212| Espero: Es capicua | Resultado: Es capicua
+	 * Introduzco: 777| Espero: Es capicua | Resultado: Es capicua
+	 * Introduzco: 732| Espero: No es capicua | Resultado: No es capicua
+	 * Introduzco: 1111| Espero: Es capicua | Resultado: Es capicua
+	 * Introduzco: 2442| Espero: Es capicua | Resultado: Es capicua
+	 * Introduzco: 1231| Espero: Es capicua | Resultado: Es capicua
+	 * Introduzco: 1223| Espero: Es capicua | Resultado: Es capicua
+	 * Introduzco: 1234| Espero: No es capicua | Resultado: No es capicua
+	 */
 	public static void main(String[] args) {
 		// Variable para el recoger el numero que introduzca el usuario
 		int num, num1;

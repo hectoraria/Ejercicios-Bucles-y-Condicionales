@@ -3,7 +3,9 @@ package ejercicios.condicionales;
 import java.util.Scanner;
 
 public class Ejercicio05 {
-
+	/* Introduzco: 1| Espero: 1| Resultado: 1
+	 * Introduzco: -1| Espero: 1| Resultado: 1
+	 */
 	public static void main(String[] args) {
 		// Variable para el recoger el numero que introduzca el usuario
 		int num;

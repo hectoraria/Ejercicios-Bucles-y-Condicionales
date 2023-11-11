@@ -4,7 +4,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio06 {
-
+	/* Introduzco: 3 | Resultado:1
+	 *							 22
+	 *							 333
+	 * Introduzco: -1 | Espero:Introduzca el numero: | Resultado:Introduzca el numero:
+	 * Introduzco: fest | Espero:El dato introducido no es del tipo correcto | Resultado:El dato introducido no es del tipo correcto
+	 */
 	public static void main(String[] args) {
 		// Creo variable para recoger el número
 		int num=0;
@@ -32,6 +37,8 @@ public class Ejercicio06 {
       			System.out.println(linea);
       			linea="";
       		}
+      	// Cerrar el Scanner
+      	sc.close();
 	}
 
 }

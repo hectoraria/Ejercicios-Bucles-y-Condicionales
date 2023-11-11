@@ -4,7 +4,15 @@ import java.util.InputMismatchException;
 import java.util.Scanner;  
 
 public class Ejercicio01 {
+	/* Introduzco: 1, 1, 1, 1| Espero: 1:1:2| Resultado: 1:1:2
+	 * Introduzco: 1, 1, 1, 1000| Espero: 1:17:41| Resultado: 1:17:41
+	 * Introduzco: 23, 59, 59, 61| Espero: 0:1:0| Resultado: 0:1:0
+	 * Introduzco: 23, 59, 59, 22222| Espero: 6:10:21| Resultado: 6:10:21
+	 * Introduzco: -4| Espero: Introduzca el numero:| Resultado: Introduzca el numero:
+	 * Introduzco: fest | Espero:El dato introducido no es del tipo correcto | Resultado:El dato introducido no es del tipo correcto
+	 */
     public static void main(String[] args) {
+    	
     	// Creo la variables de tiempo
     	int hora=0, minutos=0,segundos=0,segundosIncremento;
     	
@@ -68,8 +76,8 @@ public class Ejercicio01 {
 
         // Mostrar la nueva hora
         System.out.println("Nueva hora: " + nuevaHora + ":" + nuevosMinutos + ":" + nuevosSegundos);
-
-        scanner.close();  // Cerrar el objeto Scanner para liberar recursos
+        // Cerrar el Scanner
+        scanner.close();  
     }
 }
 

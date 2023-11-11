@@ -3,12 +3,17 @@ package ejercicios.condicionales;
 import java.util.Scanner;
 
 public class Ejercicio07 {
-
+	/* Introduzco: 1,1,1| Espero: La hora es: 1:1:2| Resultado: 1:1:2
+	 * Introduzco: 59,1,1| Espero: La hora es: 1:2:0| Resultado: 1:2:0
+	 * Introduzco: 59, 59, 1| Espero: La hora es: 2:0:0| Resultado: 2:0:0
+	 * Introduzco: 59, 59, 23| Espero: La hora es: 0:0:0| Resultado: 0:0:0
+	 * Introduzco: 62, 0, 0| Espero:La hora es: 0:1:3 | Resultado: La hora es: 0:1:3
+	 * Introduzco: -2, 0, 0| Espero: No puedes introducir estos valores| Resultado: No puedes introducir estos valores
+	 */
 	public static void main(String[] args) {
 		
 		// Declaro variables segundos, minutos y horas
 		int seg,min,horas;
-		//Variable para sumar un segundo
 		
 		
 		//Inicio escaner
@@ -26,7 +31,7 @@ public class Ejercicio07 {
 		
 		//Le sumo un segundo
 		seg++;
-		if(seg<0 && min<0 && horas<0) {
+		if(seg<0 || min<0 || horas<0) {
 			System.out.println("No puedes introducir estos valores");
 		}else {
 			if(seg>=60) {

@@ -3,7 +3,11 @@ package ejercicios.condicionales;
 import java.util.Scanner;
 
 public class Ejercicio02 {
-
+	/* Introduzco: 11111111| Espero: 11111111H| Resultado: 11111111H 
+	 * Introduzco: 11111113| Espero: 11111113C| Resultado: 11111113C
+	 * Introduzco: 0| Espero: El valor introducido no es valido| Resultado: El valor introducido no es valido
+	 * Introduzco: 123456789| Espero: El valor introducido no es valido| Resultado: El valor introducido no es valido
+	 */
 	public static void main(String[] args) {
 		// Variable para el recoger el numero que introduzca el usuario
 		int num;
@@ -16,7 +20,7 @@ public class Ejercicio02 {
 		System.out.println("Introduce tu los numeros del dni (solo 8 digitos) : ");
 		num = sc.nextInt();
 		// Comprueblo si el numero es valido
-		if(num>99999999|| num<100000000 ) {
+		if(num>99999999|| num<=0 ) {
 			System.out.println("El valor introducido no es valido");
 		}else {
 			// Compruebo la letra del dni

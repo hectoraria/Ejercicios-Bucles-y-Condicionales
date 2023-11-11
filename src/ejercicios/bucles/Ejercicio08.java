@@ -4,7 +4,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio08 {
-
+	/* Introduzco: 1, 0| Espero: Total de numeros introducidos: 1, Total de fallos: 0| Resultado:Total de numeros introducidos: 1, Total de fallos: 0
+	 * Introduzco: 1, 2, 0| Espero: Total de números introducidos: 2 Números fallados: 0| Resultado: Total de números introducidos: 2 Números fallados: 0
+	 * Introduzco: 1, 2, 1, 0| Espero: Total de números introducidos: 3 Números fallados: 1| Resultado: Total de números introducidos: 3 Números fallados: 1
+	 * Introduzco: 0| Espero: Introduzca el numero inicial:| Resultado: Introduzca el numero inicial:
+	 * Introduzco: a| Espero: El dato introducido no es del tipo correcto| Resultado: El dato introducido no es del tipo correcto
+	 */
 	public static void main(String[] args) {
 		// Variable del numero incial es decir el mayor
 		int mayor = 0;
@@ -39,7 +44,7 @@ public class Ejercicio08 {
 			}
 			// Condicional para ver si el num es menor y si es menor que de error 
 			
-			if (num < mayor) {
+			if (num < mayor && num!=0) {
 				System.out.println("Error, es menor");
 				// Contador de fallos
 				contadorFallos++;
@@ -49,6 +54,7 @@ public class Ejercicio08 {
 		// Imprimir los resultados
 		System.out.println("Total de numeros introducidos: " + contadorIntentos);
 		System.out.println("Total de fallos: " + contadorFallos);
+		sc.close();
 	}
 
 }

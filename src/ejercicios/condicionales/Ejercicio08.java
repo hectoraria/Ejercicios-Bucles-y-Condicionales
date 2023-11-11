@@ -1,33 +1,41 @@
 package ejercicios.condicionales;
 
-import java.util.Scanner;  
-import java.util.Random;   
+import java.util.Scanner;
 
 public class Ejercicio08 {
-    public static void main(String[] args) {
+	/* Introduzco: kilómetros: 265, estancia: 12| Espero: 662.5€| Resultado: 662.5€
+	 * Introduzco: kilómetros: 900, estancia: 9| Espero: 1575.0€| Resultado: 1575.0€
+	 * Introduzco: kilómetros: 1000, estancia: 3| Espero: 1575.0€| Resultado: 2500.0€
+	 */
+	public static void main(String[] args) {
+		// Variable para el precio por kilómetro en euros
+		final double PRECIO_KILOMETRO = 2.5; 
+		// Variable para la distancia y la estancia
+		int distancia, diasEstancia;
 
-        Scanner scanner = new Scanner(System.in);  // Crear un objeto Scanner para obtener la entrada del usuario
 
-        Random random = new Random();  // Crear un objeto Random para generar números aleatorios
+		Scanner scanner = new Scanner(System.in); // Crear un objeto Scanner para obtener la entrada del usuario
 
-        int numero1 = random.nextInt(99) + 1;  // Generar un número aleatorio entre 1 y 99
-        int numero2 = random.nextInt(99) + 1;  // Generar otro número aleatorio entre 1 y 99
+		System.out.print("Introduce la distancia a recorrer en kilómetros: ");
+		distancia = scanner.nextInt(); // Obtener la distancia a recorrer desde el usuario
+		// Obtener el número de días de estancia desde el usuario
+		System.out.print("Introduce el número de días de estancia: ");
+		diasEstancia = scanner.nextInt(); // Obtener el número de días de estancia desde el usuario
+		// Variable para calcular el precio del billete sin descuento
+		double precioBillete = distancia * PRECIO_KILOMETRO; 
 
-        System.out.println("Bienvenido al juego de la suma");  // Mostrar un mensaje de bienvenida al juego
-        System.out.println("Por favor, sume los siguientes números: ");
-        System.out.println(numero1 + " + " + numero2);  // Mostrar los números que el usuario debe sumar
 
-        int respuestaUsuario = scanner.nextInt();  // Obtener la respuesta del usuario
+		// Verificar si se aplica el descuento del 30%
+		if (diasEstancia > 7 && distancia > 800) {
+			// Calcular el descuento del 30%
+			double descuento = 0.3 * precioBillete; 
+			// Aplicar el descuento al precio del billete
+			precioBillete -= descuento; 
+		}
+		// Mostrar el precio del billete
+		System.out.println("El precio del billete de tren es: " + precioBillete + "€"); 
+		// Cerrar el objeto Scanner para liberar recursos
+		scanner.close(); 
 
-        int sumaCorrecta = numero1 + numero2;  // Calcular la suma correcta de los números generados
-
-	// Esta condicional comprueba si la suma es correcta o incorrecta
-        if (respuestaUsuario == sumaCorrecta) {
-            System.out.println("¡Correcto! La suma es " + sumaCorrecta);  // Mostrar un mensaje si la respuesta es correcta
-        } else {
-            System.out.println("¡Incorrecto! La suma es " + sumaCorrecta);  // Mostrar un mensaje si la respuesta es incorrecta
-        }
-
-        scanner.close();  // Cerrar el objeto Scanner para liberar recursos
-    }
+	}
 }

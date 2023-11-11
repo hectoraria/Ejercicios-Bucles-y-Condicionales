@@ -3,7 +3,9 @@ package ejercicios.condicionales;
 import java.util.Scanner;
 
 public class Ejercicio03 {
-
+	/* Introduzco: 21, 21, 1| Espero: Tiene comida suficiente | Resultado: Tiene comida suficiente
+	 * Introduzco: 20, 20, 2| Espero: Como no tienes comida suficiente a cada animal le pertenece 1.0| Resultado: Como no tienes comida suficiente a cada animal le pertenece 1.0
+	 */
 	public static void main(String[] args) {
 		// Varible para recoger la comida, animales y la consumicion de estos
 		int comida, animales, consumicion ;
@@ -27,7 +29,7 @@ public class Ejercicio03 {
 			animales = sc.nextInt();
 		}
 		
-		if(comida<=consumicion) {
+		if(comida<consumicion*animales) {
 			racion= (float) comida / animales;
 			System.out.println("Como no tienes comida suficiente a cada animal le pertenece "+ racion);
 		}else {
